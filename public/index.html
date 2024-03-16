@@ -7,7 +7,7 @@
 
 
 <div class="topBar">
-    <img src="/images/logo_fantasy.png" alt="logo_fantasy">  
+    <img src="/images/logo_fantasy.png" alt="logo_fantasy" draggable="false">  
     <button type="button"> Ready to fight at Westminster</button>
 </div>
 
@@ -20,12 +20,27 @@
   
   <div class="split middle">
     <div class="centered">
-      <img src="/images/football_pitch.png" alt="football_pitch">
+      <img src="/images/football_pitch.png" alt="football_pitch" draggable="false">
     </div>
+    <div class="invisible">
+        <img src="/images/shirts/green.png" alt="green" draggable="true" ondragstart="drag(event)" class="draggable" id="shirt1">
+    </div>
+    <div id="box1" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag1"></div>
+    <div id="box2" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag2"></div>
+    <div id="box3" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag3"></div>
+    <div id="box4" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag4"></div>
+    <div id="box5" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag5"></div>
+    <div id="box6" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag6"></div>
+    <div id="box7" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag7"></div>
+    <div id="box8" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag8"></div>
+    <div id="box9" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag9"></div>
+    <div id="box10" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag10"></div>
+    <div id="box11" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag11"></div>
   </div>
 
   <div class="split right">
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
