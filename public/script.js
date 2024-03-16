@@ -1,3 +1,12 @@
+var total_points = 1000;
+
+function updatePointsDisplay() {
+    document.getElementById("pointsValue").textContent = total_points ;
+  }
+  
+updatePointsDisplay();
+
+
 function allowDrop(event) {
     event.preventDefault();
   }
@@ -9,5 +18,17 @@ function allowDrop(event) {
   function drop(event) {
     event.preventDefault();
     var data = event.dataTransfer.getData("text");
-    event.target.appendChild(document.getElementById(data))
+    var draggedElement = document.getElementById(data)
+    var clone = draggedElement.cloneNode(true) 
+    var playerPoints = parseInt(draggedElement.getAttribute('points') || 0);
+
+    if(total_points - playerPoints >= 0) {
+        updatePoints(playerPoints);
+        event.target.appendChild(clone)
+    }
+  }
+
+  function updatePoints(amount) {
+    total_points -= amount
+    updatePointsDisplay()
   }
