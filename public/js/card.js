@@ -1,11 +1,11 @@
 class Card {
-    constructor(id, age, socialMedia, areaPop, areaWealth, pos, totalPower) {
+    constructor(age, socialMedia, areaPop, areaWealth, pos, totalPower) {
         this.age = age;
         this.socialMedia = socialMedia;
         this.areaPop = areaPop;
         this.areaWealth = areaWealth;
         this.pos = pos;
-        this.totalPower;
+        this.totalPower = totalPower;
     }
 }
 
