@@ -7,7 +7,7 @@
 
 
 <div class="topBar">
-    <img src="/images/logo_fantasy.png" alt="logo_fantasy">  
+    <img src="/images/logo_fantasy.png" alt="logo_fantasy" draggable="false">  
     <button type="button"> Ready to fight at Westminster</button>
 </div>
 
@@ -15,17 +15,134 @@
     <div class="upcoming">
     </div>
     <div class="points">
+        <div id="pointsdisplay">Total Points: <span id="pointsValue"></span></div>
     </div>
   </div>
   
   <div class="split middle">
     <div class="centered">
-      <img src="/images/football_pitch.png" alt="football_pitch">
+      <img src="/images/football_pitch.png" alt="football_pitch" draggable="false">
     </div>
+    <div id="box1" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag1"></div>
+    <div id="box2" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag2"></div>
+    <div id="box3" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag3"></div>
+    <div id="box4" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag4"></div>
+    <div id="box5" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag5"></div>
+    <div id="box6" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag6"></div>
+    <div id="box7" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag7"></div>
+    <div id="box8" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag8"></div>
+    <div id="box9" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag9"></div>
+    <div id="box10" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag10"></div>
+    <div id="box11" class="invisible-box" ondrop="drop(event)" ondragover="allowDrop(event)" id="drag11"></div>
   </div>
 
   <div class="split right">
+    <div class="player_text">
+        <div class="player">
+            <img src="/images/politicianCards/keirs.jpg"  alt="Keir Starmer" draggable="true" ondragstart="drag(event)" class="draggable" id="red1" points="99">
+            <p>Keir Starmer</p>
+        </div>
+        <div class="player">
+          <img src="/images/politicianCards/rishi.jpg" alt="Rishi Sunak" draggable="true" ondragstart="drag(event)" class="draggable" id="blue1" points="100"> 
+          <p>Rishi Sunak</p> 
+        </div>
+        <div class="player">
+            <img src="/images/politicianCards/angelar.jpg"  alt="Angela Rayner" draggable="true" ondragstart="drag(event)" class="draggable" id="red2"> 
+            <p>Angela Rayner</p> 
+          </div>
+    </div>
+    <div class="player_text">
+        <div class="player">
+            <img src="/images/politicianCards/boris.jfif"  alt="Boris Johnson" draggable="true" ondragstart="drag(event)" class="draggable" id="blue2">
+            <p>Boris Johnson</p>
+        </div>
+        <div class="player">
+          <img src="/images/politicianCards/rachelr.jpeg"  alt="Rachel Reeves" draggable="true" ondragstart="drag(event)" class="draggable" id="red3"> 
+          <p>Rachel Reeves</p> 
+        </div>
+        <div class="player">
+            <img src="/images/politicianCards/jeremyh.jpg"  alt="Jeremy Hunt" draggable="true" ondragstart="drag(event)" class="draggable" id="blue3"> 
+            <p>Jeremy Hunt</p> 
+          </div>
+    </div>
+    <div class="player_text">
+        <div class="player">
+            <img src="/images/politicianCards/bridgetp.jpg"  alt="Bridget Phillipson" draggable="true" ondragstart="drag(event)" class="draggable" id="red4">
+            <p>Bridget Phillipson</p>
+        </div>
+        <div class="player">
+          <img src="/images/politicianCards/davidc.jpg"  alt="David Cameron" draggable="true" ondragstart="drag(event)" class="draggable" id="blue4"> 
+          <p>David Cameron</p> 
+        </div>
+        <div class="player">
+            <img src="/images/politicianCards/yvettec.jpg"  alt="Yvette Cooper" draggable="true" ondragstart="drag(event)" class="draggable" id="red5"> 
+            <p>Yvette Cooper</p> 
+          </div>
+    </div>
+    <div class="player_text">
+        <div class="player">
+            <img src="/images/politicianCards/jamesc.jfif"  alt="James Clevery" draggable="true" ondragstart="drag(event)" class="draggable" id="blue5">
+            <p>James Clevery</p>
+        </div>
+        <div class="player">
+          <img src="/images/politicianCards/wess.png"  alt="Wes Streeting" draggable="true" ondragstart="drag(event)" class="draggable" id="red6"> 
+          <p>Wes Streeting</p> 
+        </div>
+        <div class="player">
+            <img src="/images/politicianCards/oliverd.jpg"  alt="Oliver Dowden" draggable="true" ondragstart="drag(event)" class="draggable" id="blue6"> 
+            <p>Oliver Dowden</p> 
+          </div>
+    </div>
+    <div class="player_text">
+        <div class="player">
+            <img src="/images/politicianCards/edm.jpg" alt="Ed Miliband" draggable="true" ondragstart="drag(event)" class="draggable" id="red7">
+            <p>Ed Miliband</p>
+        </div>
+        <div class="player">
+          <img src="/images/politicianCards/grantts.jpg"  alt="Grant Shapps" draggable="true" ondragstart="drag(event)" class="draggable" id="blue7"> 
+          <p>Grant Shapps</p> 
+        </div>
+        <div class="player">
+            <img src="/images/politicianCards/davidl.jpg"  alt="David Lammy" draggable="true" ondragstart="drag(event)" class="draggable" id="red8"> 
+            <p>David Lammy</p> 
+          </div>
+    </div>
+    <div class="player_text">
+        <div class="player">
+            <img src="/images/politicianCards/alexc.webp"  alt="Alex Chalk" draggable="true" ondragstart="drag(event)" class="draggable" id="blue8">
+            <p>Alex Chalk</p>
+        </div>
+        <div class="player">
+          <img src="/images/politicianCards/patm.webp" alt="Pat McFadden" draggable="true" ondragstart="drag(event)" class="draggable" id="red9"> 
+          <p>Pat McFadden</p> 
+        </div>
+        <div class="player">
+            <img src="/images/politicianCards/michelled.avif"  alt="Michelle Donelan" draggable="true" ondragstart="drag(event)" class="draggable" id="blue9"> 
+            <p>Michelle Donelan</p> 
+          </div>
+    </div>
+    <div class="player_text">
+        <div class="player">
+            <img src="/images/politicianCards/nickts.avif"  alt="Nick Thomas-Symonds" draggable="true" ondragstart="drag(event)" class="draggable" id="red10">
+            <p>Nick Thomas-Symonds</p>
+        </div>
+        <div class="player">
+          <img src="/images/politicianCards/liz.avif"  alt="Liz Truss" draggable="true" ondragstart="drag(event)" class="draggable" id="blue10"> 
+          <p>Liz Truss</p> 
+        </div>
+        <div class="player">
+            <img src="/images/politicianCards/jonathona.jpg"  alt="Jonathan Ashworth" draggable="true" ondragstart="drag(event)" class="draggable" id="red11"> 
+            <p>Jonathan Ashworth</p> 
+          </div>
+    </div>
+    <div class="player_text">
+        <div class="player">
+            <img src="/images/shirts/red.png" alt="Unknown" draggable="true" ondragstart="drag(event)" class="draggable" id="blue11">
+            <p> Unknown</p>
+        </div>
+    </div>
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
