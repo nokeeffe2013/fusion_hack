@@ -5,6 +5,43 @@ body {
      color: black;
  }
 
+ .card {
+    color: #333;
+    font-size: 1.6rem;
+    text-align: center;
+    align-items: center;
+    background-color: #0087dc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; 
+    width: 80%;
+    margin: 0 auto;
+    font-weight: bold;
+ }
+ .card img{
+    height: 15%;
+    width: 80%;
+    display: block;
+    margin: 0 auto 20px;
+    align-self: center;
+ }
+
+ .card button {
+    display: block; 
+    margin: 10px auto; 
+    padding: 5px 15px; 
+    border: none; 
+    background-color: #3ea9eb; 
+    color: #fff; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+ }
+
+ .card button:hover {
+    background-color: #005c96;
+}
+
  .topBar{
     margin: 0;
     padding: 0;

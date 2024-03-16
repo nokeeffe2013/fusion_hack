@@ -1,0 +1,36 @@
+.card {
+    color: #333;
+    font-size: 1.6rem;
+    text-align: center;
+    align-items: center;
+    background-color: #d50000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; 
+    width: 80%;
+    margin: 0 auto;
+    font-weight: bold;
+ }
+ .card img{
+    height: 15%;
+    width: 80%;
+    display: block;
+    margin: 0 auto 20px;
+    align-self: center;
+ }
+
+ .card button {
+    display: block; 
+    margin: 10px auto; 
+    padding: 5px 15px; 
+    border: none; 
+    background-color: #d36262; 
+    color: #fff; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+ }
+
+ .card button:hover {
+    background-color: #b30000;
+}
