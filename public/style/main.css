@@ -1,17 +1,40 @@
 body {
-    background-color: white; 
+    background-color: black; 
  }
  h1 {
      color: black;
  }
 
+ .topBar{
+    margin: 0;
+    padding: 0;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+
+  .topBar img {
+    height: 90px;
+    background-color: black;
+    width: auto; /* To maintain aspect ratio */
+  }
+
+  .topBar button {
+    height: 40px;
+    background-color: #1a1b1f;
+    color: white;
+    width: auto; /* To maintain aspect ratio */
+  }
+
  /* Split the screen in half */
 .split {
-height: 100%;
-width: 33%;
+height: 85%;
 position: fixed;
 z-index: 1;
-top: 0;
+bottom: 0;
 overflow-x: hidden;
 padding-top: 20px;
 }
@@ -19,19 +42,38 @@ padding-top: 20px;
 /* Control the left side */
 .left {
 left: 0;
-background-color: white;
+width: 25%;
+height: 90%;
+}
+
+.upcoming{
+    top:15%;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background-color: black;
+}
+
+.points{
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-color: black;
+    position: fixed;
 }
 
 .middle {
-left:33%;
-width: 34%;
-background-color: blue;
+left:25%;
+width: 50%;
+background-color: black;
 }
 
 /* Control the right side */
 .right {
 right: 0;
-background-color: red;
+width: 25%;
+background-color: black;
 }
 
 /* If you want the content centered horizontally and vertically */
@@ -45,6 +87,6 @@ text-align: center;
 
 /* Style the image inside the centered container, if needed */
 .centered img {
-width: 400px;
+width: 600px;
 height: 500px;
 }
