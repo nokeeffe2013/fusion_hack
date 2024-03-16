@@ -1,4 +1,4 @@
-var total_points = 1000;
+var total_points = 750;
 
 let draggedItems = [];
 
