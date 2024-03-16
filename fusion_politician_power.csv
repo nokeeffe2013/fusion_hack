@@ -1,23 +1,23 @@
-﻿name,party,followers,age,age,area,population,sum,normalised_sum,power
-Boris Johonson,Conservative,10,59,7,0,0,17,56.66666667,56
-Nick Thomas-Symonds,Labour,1,43,4,3,1,9,30,30
-Pat McFadden,Labour,1,58,6,4,1,12,40,40
-Rachel Reeves,Labour,4,45,4,6,1,15,50,50
-Angela Rayner,Labour,7,43,4,6,2,19,63.33333333,63
-Bridget Phillipson,Labour,3,40,3,2,2,10,33.33333333,33
-Penny Mordaunt,Conservative,5,51,5,7,3,20,66.66666667,66
-Ed Miliband,Labour,8,54,6,4,3,21,70,70
-Wes Streeting,Labour,4,41,4,2,4,14,46.66666667,46
-Oliver Dowden,Conservative,2,45,4,7,4,17,56.66666667,56
-Grant Shapps,Conservative,4,55,6,5,5,20,66.66666667,66
-James Clevery,Conservative,5,54,6,5,5,21,70,70
-David Lammy,Labour,7,51,5,4,6,22,73.33333333,73
-Michelle Donelan,Conservative,2,39,3,8,6,19,63.33333333,63
-Jonathan Ashworth,Labour,3,45,4,3,7,17,56.66666667,56
-Liz Truss,Conservative,7,48,5,1,7,20,66.66666667,66
-Jeremy Hunt,Conservative,6,57,6,10,7,29,96.66666667,96
-Alex Chalk,Conservative,1,47,5,8,8,22,73.33333333,73
-Rishi Sunak,Conservative,9,43,4,9,8,30,100,100
-David Cameron,Conservative,9,57,6,9,9,33,110,98
-Yvette Cooper,Labour,6,54,6,1,9,22,73.33333333,73
-Keir Starmer ,Labour,8,61,7,7,10,32,106.6666667,99
+name,party,followers,age,area,population,sum,normalised_sum,power
+Boris Johonson,Conservative,10,7,0,0,17,56.66666667,56
+Nick Thomas-Symonds,Labour,1,4,3,1,9,30,30
+Pat McFadden,Labour,1,6,4,1,12,40,40
+Rachel Reeves,Labour,4,4,6,1,15,50,50
+Angela Rayner,Labour,7,4,6,2,19,63.33333333,63
+Bridget Phillipson,Labour,3,3,2,2,10,33.33333333,33
+Penny Mordaunt,Conservative,5,5,7,3,20,66.66666667,66
+Ed Miliband,Labour,8,6,4,3,21,70,70
+Wes Streeting,Labour,4,4,2,4,14,46.66666667,46
+Oliver Dowden,Conservative,2,4,7,4,17,56.66666667,56
+Grant Shapps,Conservative,4,6,5,5,20,66.66666667,66
+James Clevery,Conservative,5,6,5,5,21,70,70
+David Lammy,Labour,7,5,4,6,22,73.33333333,73
+Michelle Donelan,Conservative,2,3,8,6,19,63.33333333,63
+Jonathan Ashworth,Labour,3,4,3,7,17,56.66666667,56
+Liz Truss,Conservative,7,5,1,7,20,66.66666667,66
+Jeremy Hunt,Conservative,6,6,10,7,29,96.66666667,96
+Alex Chalk,Conservative,1,5,8,8,22,73.33333333,73
+Rishi Sunak,Conservative,9,4,9,8,30,100,100
+David Cameron,Conservative,9,6,9,9,33,110,98
+Yvette Cooper,Labour,6,6,1,9,22,73.33333333,73
+Keir Starmer ,Labour,8,7,7,10,32,106.6666667,99
