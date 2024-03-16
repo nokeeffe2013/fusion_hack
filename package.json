@@ -1,0 +1,29 @@
+{
+  "name": "fusion_hack",
+  "version": "1.0.0",
+  "description": "Fusion hack for group",
+  "private": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nokeeffe2013/fusion_hack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nokeeffe2013/fusion_hack/issues"
+  },
+  "homepage": "https://github.com/nokeeffe2013/fusion_hack#readme",
+  "devDependencies": {
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
