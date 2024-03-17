@@ -1,0 +1,138 @@
+/* Control the left side */
+
+.left {
+    left: 0;
+    width: 25%;
+    background-color: black;
+    height: 85%;
+    }
+    
+    .middle1 {
+    left:25%;
+    width: 25%;
+    background-color: black;
+    }
+    
+    .middle2 {
+        right:25%;
+        width: 25%;
+        background-color: black;
+
+        }
+    /* Control the right side */
+    .right {
+    right: 0;
+    width: 25%;
+    background-color: black;
+    }
+    
+    /* If you want the content centered horizontally and vertically */
+    .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    }
+
+    .card.conservative {
+        color: #333;
+        font-size: 1.6rem;
+        text-align: center;
+        align-items: right;
+        background-color: #dc0000;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px; 
+        width: 80%;
+        margin: 0 auto;
+        font-weight: bold;
+     }
+
+     .conservative img{
+        height: 15%;
+        width: 80%;
+        display: block;
+        margin: 0 auto 20px;
+        align-self: center;
+     }
+    
+     .conservative button {
+        display: block; 
+        margin: 10px auto; 
+        padding: 5px 15px; 
+        border: none; 
+        background-color: #eb3e3e; 
+        color: #fff; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease; 
+     }
+    
+     .conservative button:hover {
+        background-color: #960000;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0087dc;
+        background-size: cover;
+        border-radius: 10px;
+    }
+
+    .card.labour {
+        color: #333;
+        font-size: 1.6rem;
+        text-align: center;
+        align-items: center;
+        background-color: #0087dc;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px; 
+        width: 80%;
+        margin: 0 auto;
+        font-weight: bold;
+        position: relative; 
+     }
+
+     .labour button {
+        display: block; 
+        margin: 10px auto; 
+        padding: 5px 15px; 
+        border: none; 
+        background-color: #3eaceb; 
+        color: #fff; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease; 
+     }
+    
+     .labour button:hover {
+        background-color: #006496;
+    }
+
+    .labour img{
+        height: 15%;
+        width: 80%;
+        display: block;
+        margin: 0 auto 20px;
+        align-self: center;
+     }
+
+     .rotate-text {
+        transform: rotate(75deg);
+        /* Vendor prefixes for better browser compatibility */
+        /* Safari */
+        -webkit-transform: rotate(75deg);
+        /* Firefox */
+        -moz-transform: rotate(75deg);
+        /* IE */
+        -ms-transform: rotate(75deg);
+        /* Opera */
+        -o-transform: rotate(75deg);
+    }
+    

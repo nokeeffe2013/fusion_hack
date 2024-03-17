@@ -6,7 +6,6 @@ function updatePointsDisplay() {
     document.getElementById("pointsValue").textContent = total_points ;
   }
   
-updatePointsDisplay();
 
 
 function allowDrop(event) {
