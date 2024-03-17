@@ -71,8 +71,8 @@ function closePopup() {
 }
 
 function answerQuestion(answer) {
-  if (answer === 49) {
-      console.log("Correct! 49%");
+  if (answer === 1) {
+      console.log("Correct! ");
       total_points += 100;
       updatePointsDisplay()
   } else {
