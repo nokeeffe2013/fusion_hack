@@ -2,6 +2,8 @@ var total_points = 750;
 
 let draggedItems = [];
 
+let card_id = [];
+
 function updatePointsDisplay() {
     document.getElementById("pointsValue").textContent = total_points ;
   }
@@ -27,6 +29,9 @@ function allowDrop(event) {
     var clone = draggedElement.cloneNode(true) 
     var playerPoints = parseInt(draggedElement.getAttribute('points') || 0);
 
+    console.log(data)
+    card_id.push(data)
+
     if(event.target != event.currentTarget) {
         var location = draggedItems.indexOf(event.currentTarget);
         var playerPoints = parseInt(event.currentTarget.getElementById(data).getAttribute('points') || 0);
@@ -45,4 +50,8 @@ function allowDrop(event) {
   function updatePoints(amount) {
     total_points -= amount
     updatePointsDisplay()
+  }
+
+  function startBattle() {
+    window.open('battle.html?card_ids=' + JSON.stringify(card_id),'_blank');
   }

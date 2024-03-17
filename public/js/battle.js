@@ -1,106 +1,69 @@
 var teamOne = 10;
 var teamTwo = 10;
+let card_Ids = [];
+let opposition_ids = ['nts','rs','bp','pm']
+var pointerOne = 0;
+var pointerTwo = 0;
 
-/*function hydeOverlay(){
-    // When social button is clicked
-    var button1 = document.getElementById('social');
-    var button2 = document.getElementById('Age');
-    var button3 = document.getElementById('areaWealth');
-    var button4 = document.getElementById('areaPop');
-    var button5 = document.getElementById('total');
 
-    var button6 = document.getElementById('social2');
-    var button7 = document.getElementById('Age2');
-    var button8 = document.getElementById('areaWealth2');
-    var button9 = document.getElementById('areaPop2');
-    var button10 = document.getElementById('total2');
+window.onload = function() {
+  var queryParams = new URLSearchParams(window.location.search);
+  var cardIdsParam = queryParams.get('card_ids');
+  var cardIds = JSON.parse(cardIdsParam);
+  teamOne = cardIds.length;
+  updateteamOneDisplay();
+  teamTwo = opposition_ids.length;
+  updateteamTwoDisplay();
+  card_Ids = cardIds;
+  loadCard(card_Ids[pointerOne], 'card1');
+  loadCard(opposition_ids[pointerTwo], 'card2');
+}
 
-    // Add a click event listener to the button
-    button1.addEventListener('click', function() {
-      // Code to execute when the button is clicked
-      document.getElementById('overlay').style.display = 'none';
-      compareSocial(button1.innerText, button6.innerText);      
-        console.log(button1.innerText);
-    });
-    button2.addEventListener('click', function() {
-      // Code to execute when the button is clicked
-      document.getElementById('overlay').style.display = 'none';
-      compareSocial(button2.innerText, button7.innerText);      });
-    button3.addEventListener('click', function() {
-      // Code to execute when the button is clicked
-      document.getElementById('overlay').style.display = 'none';
-      
-      compareSocial(button3.innerText, button8.innerText);      });
-    button4.addEventListener('click', function() {
-      // Code to execute when the button is clicked
-      document.getElementById('overlay').style.display = 'none';
-      
-      compareSocial(button4.innerText, button9.innerText);     });
-     button5.addEventListener('click', function() {
-      // Code to execute when the button is clicked
-      document.getElementById('overlay').style.display = 'none';
 
-      
-      compareSocial(button5.innerText, button10.innerTex10);
-            });
-    
-    
-}*/
 
 function hydeOverlaySocial(){
-    var button1 = document.getElementById('social');
-    var button6 = document.getElementById('social2');
-    document.getElementById('overlay').style.display = 'none';
-    compareSocial(button1.innerText, button6.innerText);      
-    console.log(button1.innerText);
+  console.log("social")
+    var button1 = document.getElementById('card1').querySelector('#social').textContent;
+    var button6 = document.getElementById('card2').querySelector('#social').textContent;
+    compareSocial(button1, button6);  
     document.getElementById('social').style.display = 'none';
-    document.getElementById('social2').style.display = 'none';
+    document.getElementById('card2').querySelector('#social').style.display = 'none';
 }
 
 function hydeOverlayAge(){
-    var button1 = document.getElementById('Age');
-    var button6 = document.getElementById('Age2');
-        // Code to execute when the button is clicked
-        document.getElementById('overlay').style.display = 'none';
-        compareSocial(button1.innerText, button6.innerText);      
-        console.log(button1.innerText);
+  var button1 = document.getElementById('card1').querySelector('#Age').textContent;
+    var button6 = document.getElementById('card2').querySelector('#Age').textContent;
+    console.log(button1);
+    console.log(button6);
+        compareSocial(button1, button6); 
         document.getElementById('Age').style.display = 'none';
-        document.getElementById('Age2').style.display = 'none';
+        document.getElementById('card2').querySelector('#Age').style.display = 'none';
 }
 
 function hydeOverlayAreaWealth(){
-    var button1 = document.getElementById('areaWealth');
-    var button6 = document.getElementById('areaWealth2');
-        // Code to execute when the button is clicked
-        document.getElementById('overlay').style.display = 'none';
-        compareSocial(button1.innerText, button6.innerText);      
-          console.log(button1.innerText);
+  var button1 = document.getElementById('card1').querySelector('#areaWealth').textContent;
+    var button6 = document.getElementById('card2').querySelector('#areaWealth').textContent;
+    compareSocial(button1, button6);       
           document.getElementById('areaWealth').style.display = 'none';
-        document.getElementById('areaWealth2').style.display = 'none';
+          document.getElementById('card2').querySelector('#areaWealth').style.display = 'none';
 
 }
 
 function hydeOverlayAreaPop(){
-    var button1 = document.getElementById('areaPop');
-    var button6 = document.getElementById('areaPop2');
-        // Code to execute when the button is clicked
-        document.getElementById('overlay').style.display = 'none';
-        compareSocial(button1.innerText, button6.innerText);      
-          console.log(button1.innerText);
+  var button1 = document.getElementById('card1').querySelector('#areaPop').textContent;
+    var button6 = document.getElementById('card2').querySelector('#areaPop').textContent;
+    compareSocial(button1, button6);      
           document.getElementById('areaPop').style.display = 'none';
-        document.getElementById('areaPop2').style.display = 'none';
+          document.getElementById('card2').querySelector('#areaPop').style.display = 'none';
 
 }
 
 function hydeOverlayTotal(){
-    var button1 = document.getElementById('total');
-    var button6 = document.getElementById('total2');
-        // Code to execute when the button is clicked
-        document.getElementById('overlay').style.display = 'none';
-        compareSocial(button1.innerText, button6.innerText);      
-          console.log(button1.innerText);
+  var button1 = document.getElementById('card1').querySelector('#total').textContent;
+    var button6 = document.getElementById('card2').querySelector('#total').textContent;
+    compareSocial(button1, button6);   
           document.getElementById('total').style.display = 'none';
-          document.getElementById('total2').style.display = 'none';
+          document.getElementById('card2').querySelector('#total').style.display = 'none';
 
 }
 
@@ -125,12 +88,14 @@ function compareSocial(value1, value2){
 
     if(playerPoints1 > playerPoints2){
         teamTwo = teamTwo - 1;
+        loadBlueCard();
         updateteamTwoDisplay();
         setTimeout(() => {document.getElementById('overlay').style.display = 'block';},"2500");
         
     }
     else if (playerPoints1 < playerPoints2){
         teamOne = teamOne - 1;
+        loadRedCard();
         updateteamOneDisplay();
 }
     else if (teamOne == teamTwo){
@@ -147,4 +112,72 @@ function updateteamOneDisplay() {
 
   function updateteamTwoDisplay() {
     document.getElementById("teamTwo").textContent = teamTwo;
+  }
+
+
+  function loadRedCard() {
+    pointerOne += 1;
+    if(card_Ids[pointerOne] == null) {
+      console.log("Blue won")
+      document.getElementById("position").textContent = "You lost";
+      showPopup()
+    }
+    loadCard(card_Ids[pointerOne], 'card1')
+  }
+
+  function loadBlueCard() { 
+    pointerTwo += 1;
+    if(opposition_ids[pointerTwo] == null) {
+      console.log("Red won")
+      showPopup()
+    }
+    loadCard(opposition_ids[pointerTwo], 'card2')
+  }
+
+
+  function loadCard(value, cardVal) {
+      fetch('cards.html')
+        .then(response => response.text())
+        .then(html => {
+          const tempElement = document.createElement('div');
+          tempElement.innerHTML = html;
+          console.log('#' + value)
+          const ntsContent = tempElement.querySelector('#' + value).innerHTML;
+          const card = document.getElementById(cardVal);
+          if (card) {
+            card.innerHTML = ntsContent;
+            if(cardVal=="card1") {
+              const socialButton = card.querySelector('#social');
+              socialButton.addEventListener('click', function() {
+                hydeOverlaySocial();
+              });
+              const ageButton = card.querySelector('#Age');
+              ageButton.addEventListener('click', function() {
+                hydeOverlayAge();
+              });
+              const wealthButton = card.querySelector('#areaWealth');
+              wealthButton.addEventListener('click', function() {
+                hydeOverlayAreaWealth();
+              });
+              const popButton = card.querySelector('#areaPop');
+              popButton.addEventListener('click', function() {
+                hydeOverlayAreaPop();
+              });
+              const totalButton = card.querySelector('#total');
+              totalButton.addEventListener('click', function() {
+                hydeOverlayTotal();
+              });
+            } else {
+            }
+          } else {
+            console.error('Element with id "card" not found.');
+          }
+        })
+        .catch(error => console.error('Error fetching cards.html:', error));
+
+  }
+
+  function showPopup() {
+    var popup = document.getElementById('popup');
+    popup.style.display = 'block';
   }

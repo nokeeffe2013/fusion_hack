@@ -14,7 +14,7 @@
     <div class="split left">
         <div class="player_text">
             <div class="player">
-                <img src="/images/shirts/red.png"  alt="Keir Starmer" draggable="true" ondragstart="drag(event)" class="draggable" id="red1" points="99">
+                <img src="/images/shirts/red.png"  alt="Keir Starmer">
                 <p>Conservative</p>
                 <span id="teamOne">10</span><p> players left</p>
             </div>
@@ -23,14 +23,7 @@
 
       <div class="split middle1">
         <div class="stack">
-            <div class="card conservative">
-                <p>Rishi Sunak</p>
-                <img src="/images/politicianCards/rishi.jpg"  alt="Keir Starmer">
-                <button id="social" onclick="hydeOverlaySocial()"> Social Media: 9</button>
-                <button id="Age" onclick="hydeOverlayAge()"> Age: 4</button> 
-                <button id="areaWealth" onclick="hydeOverlayAreaWealth()"> Area Wealth: 9</button>
-                <button id="areaPop" onclick="hydeOverlayAreaPop()"> Area Population: 8</button>
-                <button id="total" onclick="hydeOverlayTotal()"> Total Score: 100</button>
+            <div class="card conservative" id="card1">
             </div>
         </div>
       
@@ -38,15 +31,7 @@
 
       <div class="split middle2">
         <div class="stack">
-            <div class="card labour">
-                <div class="overlay" id="overlay"></div> 
-                <p>Keir Starmer</p>
-                <img src="/images/politicianCards/keirs.jpg"  alt="Keir Starmer">
-                <button id="social2" onclick="window.open('stack.html','_blank')"> Social Media: 8</button>
-                <button id="Age2" onclick="window.open('stack.html','_blank')"> Age: 7</button> 
-                <button id="areaWealth2" onclick="window.open('stack.html','_blank')"> Area Wealth: 7</button>
-                <button id="areaPop2" onclick="window.open('stack.html','_blank')"> Area Population: 10</button>
-                <button id="total2" onclick="window.open('stack.html','_blank')"> Total Score: 99</button>
+            <div class="card labour" id="card2">
             </div>
         </div>
       
@@ -55,7 +40,7 @@
       <div class="split right">
         <div class="player_text">
             <div class="player">
-                <img src="/images/shirts/blue.png"  alt="Keir Starmer" draggable="true" ondragstart="drag(event)" class="draggable" id="red1" points="99">
+                <img src="/images/shirts/blue.png"  alt="Keir Starmer" >
                 <p>Labour</p>
                 <span id="teamTwo">10</span><p> players left</p>
             </div>
@@ -64,6 +49,12 @@
         
       </div>
 
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="window.open('http://localhost:9001' ,'_blank');">&times;</span>
+          <p id="position">You Won!</p>
+        </div>
+      </div>
 
 
   <script src="script.js"></script>
