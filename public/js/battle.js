@@ -59,6 +59,12 @@ function hydeOverlayAreaPop(){
 }
 
 function hydeOverlayTotal(){
+  var fc = document.getElementById('fantasyCard')
+  fc.style.opacity = '0';
+  setTimeout(function() {
+    fc.style.opacity = '1'; // Revert back to opaque
+}, 3000); 
+
   var button1 = document.getElementById('card1').querySelector('#total').textContent;
     var button6 = document.getElementById('card2').querySelector('#total').textContent;
     compareSocial(button1, button6);   
@@ -136,6 +142,14 @@ function updateteamOneDisplay() {
 
 
   function loadCard(value, cardVal) {
+    if(card_Ids[pointerOne] == opposition_ids[pointerTwo]) {
+      loadBlueCard();
+      loadRedCard();
+      teamOne -= 1;
+      teamTwo -= 1;
+      updateteamOneDisplay();
+      updateteamTwoDisplay();
+    }
       fetch('cards.html')
         .then(response => response.text())
         .then(html => {

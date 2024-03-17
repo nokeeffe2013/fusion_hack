@@ -4,6 +4,10 @@ let draggedItems = [];
 
 let card_id = [];
 
+updatePointsDisplay()
+
+displayPopup()
+
 function updatePointsDisplay() {
     document.getElementById("pointsValue").textContent = total_points ;
   }
@@ -55,3 +59,24 @@ function allowDrop(event) {
   function startBattle() {
     window.open('battle.html?card_ids=' + JSON.stringify(card_id),'_blank');
   }
+
+function displayPopup() {
+  var popup = document.getElementById("popup");
+  popup.style.display = "block";
+}
+
+function closePopup() {
+  var popup = document.getElementById("popup");
+  popup.style.display = "none";
+}
+
+function answerQuestion(answer) {
+  if (answer === 49) {
+      console.log("Correct! 49%");
+      total_points += 100;
+      updatePointsDisplay()
+  } else {
+      console.log("Incorrect answer");
+  }
+  closePopup();
+}
